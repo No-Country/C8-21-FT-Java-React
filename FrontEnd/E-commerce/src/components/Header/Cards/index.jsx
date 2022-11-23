@@ -1,16 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { Content } from '../../GlobalStyled'
 import { ContentCard, Text } from './StyledCards'
-import { AiOutlineShoppingCart, AiOutlineHeart, AiFillStar } from 'react-icons/ai'
+import { AiOutlineShoppingCart, AiOutlineHeart, AiFillStar, AiFillHeart } from 'react-icons/ai'
 import { TiTickOutline } from 'react-icons/ti'
 import { DataDestacado } from '../../data/Destacado'
 
 
 
 const index = () => {
+
+    const [clickFav, setClickFav] = useState(false)
+
+
+    const clicked = () => {
+        setClickFav(!clickFav)
+        console.log(setClickFav)
+    }
+
+
     const settings = {
         dots: true,
         infinite: true,
@@ -53,24 +63,39 @@ const index = () => {
             <Slider {...settings}>
                 {DataDestacado.map(item => (
                     <ContentCard key={item.id}>
-                        <div className='Stock'>In Stock <TiTickOutline color='blue' /></div>
-                        <div className='fav'><AiOutlineHeart /></div>
-                        <div className='img'>Imagen</div>
-                        <div className='Review'>
-                            <AiFillStar color='yellow' />
-                            <AiFillStar color='yellow' />
-                            <AiFillStar color='yellow' />
-                            <AiFillStar color='yellow' />
-                            <AiFillStar />
+                        <div className='fav'>
 
-                            Reviews {item.review}
+                            {
+                                !clickFav ? <AiOutlineHeart size={25} color='grey' cursor='pointer' onClick={clicked} />
+                                    : <AiFillHeart size={25} color='blue' cursor='pointer' onClick={clicked} />
+                            }
+
                         </div>
-                        <div className='tittle'>{item.title}</div>
+                        <div className='img'>
+                            <img className='editimg' src={item.Img} alt={item.altImg} />
+                        </div>
+                        <div className='Review'>
+                            <div className='starts'>
+                                <AiFillStar color='#E9A426' />
+                                <AiFillStar color='#E9A426' />
+                                <AiFillStar color='#E9A426' />
+                                <AiFillStar color='#E9A426' />
+                                <AiFillStar color='#CACDD8' />
+                            </div>
+                            <div className='textStarts'>
+                                <p>Reviews ({item.review})</p>
+                            </div>
+                        </div>
+
+
+                        <div className='Contentittle'>
+                            <h2 className='tittle'>{item.title}</h2>
+                        </div>
                         <div className='priceOld'>{item.priceOld}</div>
                         <div className='priceNew'>{item.priceNew}</div>
 
                         <div className='btn'>
-                            <button className='TextBtn'><AiOutlineShoppingCart size={30} /> Agregar </button>
+                            <button className='TextBtn'>Ver mas </button>
                         </div>
                     </ContentCard>
                 ))}

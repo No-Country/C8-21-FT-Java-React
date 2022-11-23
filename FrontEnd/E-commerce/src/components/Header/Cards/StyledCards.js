@@ -6,48 +6,70 @@ export const Text = styled.h2`
 `
 
 export const ContentCard = styled.div`
-    width: 300px;
-    height: 300px;
+    width: 234px;
+    background-color: red;
+    height: 319px; 
+    padding: 15px, 25px, 15px, 25px;
     margin-top: 30px;
-    overflow: hidden;
-    border-color: 3px black;
+    box-shadow: 0px 1px 2px #CACDD8, 1px 2px 2px #CACDD8, 2px 3px 2px #CACDD8 , 3px 4px 2px #CACDD8 ;
+    background-color: white;
 
     &:hover{
-        height: 350px;
-        .Stock, .fav, .TextBtn{
+        height: 370px;
+        .Stock, .fav,{
             transition: .9s ease;
             opacity: 1;
         }
-    }
 
-    .Stock{
-        margin-left: 3rem;
-        padding-top: 10px;
-        color: blue;
-        opacity: 0;
+        .btn{
+            opacity: 1;
+        }
 
     }
+
     .fav{
-        text-align: right;
+        display: flex;
+        justify-content: flex-end ;
+        margin-top: 22px;
         margin-right: 30px;
-        margin-top: 15px;
-        opacity: 0;
+
     }
 
-    .img{
-        margin-bottom: 40px;
-    }
+        .editimg{
+            width: 190px;
+            height: 100px;
+            margin: 0px auto;
+            margin-bottom: 20px;
+        }
+    
 
     .Review{
-        text-align: center;
+        width: 180px;
+        display:flex;
         color: #ccc;
-        margin-bottom: 40px;
+        justify-content: center; 
+        margin-left: 3rem;
+        .textStarts{
+            margin-left: 20px;
+            color: #ccc;
+        }
     }
 
-    .tittle{
+
+    .Contentittle{
+        width: 300px;
+        height: 60px;
+        font-style: normal;
+        display: flex;
+        align-items: center;
         margin-left: 3rem;
-        color: black;
-        margin-bottom: 40px;
+        font-family: 'Poppins'; 
+        color: #000000;
+        font-weight: 400;
+        font-size: 13px;
+        .tittle{
+            line-height: 20px;
+        }
     }
 
     .priceOld{
@@ -55,34 +77,38 @@ export const ContentCard = styled.div`
         color: grey;
         text-decoration: line-through;
         margin-bottom: 10px;
+        font-family: 'Poppins';
+        font-size: 20px;
+        font-weight: 600;
     }
 
     .priceNew{
         margin-left: 3rem;
+        font-family: 'Poppins';
+        color: black;
+        font-size: 30px;
+        font-weight: 600;
     }
 
     .btn{
-        margin-top: 20px;
+        width: 234px;
+        height: 90px;
         display: block;
-        padding-left: 70px;
+        opacity:0;
+        margin: 0px auto;
 
     }
 
-    .TextBtn{
-        border-radius: 40%;
-        border-color: #ccc;
-        border: none;
+    button{
+        border-radius: 20px;
+        border-color: #004DFF;
         width: 200px;
         height: 40px;
         background: white;
-        color: #ccc;
+        color: #004DFF;
         font-size: 20px;
         line-height: 30px;
-        opacity: 0;
         cursor: pointer;
-        &:hover{
-            border:2px #ccc;
-        }
     }
 
 `
