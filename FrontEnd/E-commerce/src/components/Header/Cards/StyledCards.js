@@ -8,14 +8,15 @@ export const Text = styled.h2`
 export const ContentCard = styled.div`
     width: 234px;
     background-color: red;
-    height: 319px; 
+    height: 340px; 
     padding: 15px, 25px, 15px, 25px;
     margin-top: 30px;
     box-shadow: 0px 1px 2px #CACDD8, 1px 2px 2px #CACDD8, 2px 3px 2px #CACDD8 , 3px 4px 2px #CACDD8 ;
     background-color: white;
+    margin-bottom: 100px;
 
     &:hover{
-        height: 370px;
+        height: 400px;
         .Stock, .fav,{
             transition: .9s ease;
             opacity: 1;
@@ -49,6 +50,11 @@ export const ContentCard = styled.div`
         color: #ccc;
         justify-content: center; 
         margin-left: 3rem;
+        .starts{
+            display: flex;
+            flex-direction: row; 
+            margin-top: 6px ;
+        }
         .textStarts{
             margin-left: 20px;
             color: #ccc;
