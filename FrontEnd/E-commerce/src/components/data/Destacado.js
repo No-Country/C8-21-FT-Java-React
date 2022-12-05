@@ -1,4 +1,4 @@
-export const DataDestacado = [
+export const DestacadoMonitores = [
     {
         id: 1,
         title: 'Teclado Redragon K512 RGB SHIVA White',
@@ -6,7 +6,8 @@ export const DataDestacado = [
         priceOld: '$59.99',
         priceNew: '$90.000',
         Img: 'TecladoRazer.png',
-        altImg: 'Teclado Razer',
+        linkImg:
+            '',
     },
     {
         id: 2,
@@ -28,8 +29,12 @@ export const DataDestacado = [
         linkImg:
             '',
     },
+];
+
+
+export const DestacadoGabinete = [
     {
-        id: 4,
+        id: 1,
         title: 'Teclado Redragon K512 RGB SHIVA White',
         review: '4',
         priceOld: '$59.99',
@@ -39,7 +44,7 @@ export const DataDestacado = [
             '',
     },
     {
-        id: 5,
+        id: 2,
         title: 'Teclado Redragon K512 RGB SHIVA White',
         review: '4',
         priceOld: '$59.99',
@@ -49,7 +54,21 @@ export const DataDestacado = [
             '',
     },
     {
-        id: 6,
+        id: 3,
+        title: 'Teclado Redragon K512 RGB SHIVA White',
+        review: '4',
+        priceOld: '$59.99',
+        priceNew: '$90.000',
+        Img: 'TecladoRazer.png',
+        linkImg:
+            '',
+    },
+];
+
+
+export const DestacadoPeriferico = [
+    {
+        id: 1,
         title: 'Teclado Redragon K512 RGB SHIVA White',
         review: '4',
         priceOld: '$59.99',
@@ -59,7 +78,7 @@ export const DataDestacado = [
             '',
     },
     {
-        id: 7,
+        id: 2,
         title: 'Teclado Redragon K512 RGB SHIVA White',
         review: '4',
         priceOld: '$59.99',
@@ -69,7 +88,7 @@ export const DataDestacado = [
             '',
     },
     {
-        id: 8,
+        id: 3,
         title: 'Teclado Redragon K512 RGB SHIVA White',
         review: '4',
         priceOld: '$59.99',
