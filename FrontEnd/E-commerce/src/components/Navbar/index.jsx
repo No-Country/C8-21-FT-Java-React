@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styled, { withTheme } from 'styled-components'
 import BurguerButton from './BurguerButton'
+import { Link } from 'react-router-dom'
 
 import Logo from '../../../public/Logo.png'
 
@@ -26,9 +27,9 @@ function navbar() {
                     <a onClick={handleClick} href="#h"> Gabinetes</a>
                     <a onClick={handleClick} href="#h"> Contacto</a>
                 </div>
-                <div className='iconos'>
-                    <AiOutlineShoppingCart color='grey' className='shop' />
-                    <AiOutlineUserAdd color='blue' className='user' />
+                <div className={`iconos ${clicked ? 'active' : ''}`}>
+                    <AiOutlineShoppingCart color='grey' cursor='pointer' className='shop' />
+                    <AiOutlineUserAdd color='blue' cursor='pointer' className='user' />
                 </div>
                 <div className='burguer'>
                     <BurguerButton clicked={clicked} handleClick={handleClick} />
@@ -62,6 +63,7 @@ const NavContainer = styled.nav`
     .iconos{
         display: flex;
         gap: 20px;
+        cursor: pointer;
 
         .shop, .user{
             width: 23px;
@@ -82,7 +84,7 @@ const NavContainer = styled.nav`
         }
     }
     //Codigo para ocultar links de opciones del nav
-    .links{
+    .links, .iconos{
         position: absolute;
         display: flex;
         top: -700px;
@@ -116,16 +118,37 @@ const NavContainer = styled.nav`
         position: absolute;
         margin-left: auto;
         margin-right: auto;
-        top: 30%;
+        top: 10%;
         left: 0;
         right: 0;
         text-align: center;
+        z-index:11;
         a{
             font-size: 1.6rem;
             margin-top: 1rem; 
-            color: black;
+            color: white;
             z-index: 10;
         }      
+    }
+
+    .iconos.active {
+        width: 10%;
+        position: absolute;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        top: 60%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        z-index:11;
+        font-size: 1.6rem;
+        justify-content: center;
+
+        .shop, .user{
+            width: 30px;
+            height: 30px;
+        }
     }
 `
 const BgDiv = styled.div`

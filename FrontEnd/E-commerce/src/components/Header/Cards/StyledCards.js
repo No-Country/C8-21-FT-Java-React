@@ -13,6 +13,11 @@ export const ContentCard = styled.div`
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
     background: red;
+
+    @media (max-width: 1027px){
+        grid-template-columns: 1fr 1fr; 
+        width: 90%;
+    }
 `
 
 export const ContentGrid = styled.div`
