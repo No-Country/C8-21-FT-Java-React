@@ -32,7 +32,8 @@ export const ContentGrid = styled.div`
         grid-template-columns: 1fr 1fr; 
     }
     @media (max-width: 420px){
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr 1fr; 
+        gap: 10px;
     }
 
 
@@ -43,6 +44,11 @@ export const ContentGrid = styled.div`
 
         @media (max-width: 770px){
             width: 200px;
+            height: 330px;
+        }
+
+        @media (max-width: 420px){
+            width: 170px;
             height: 330px;
         }
     }
@@ -65,6 +71,13 @@ export const Card = styled.div`
         width: 200px;
         height: 120px;
         margin: 0px auto;
+
+
+        
+        @media (max-width: 420px){
+            width: 140px;
+        }
+
     }
 
     .Starts {
