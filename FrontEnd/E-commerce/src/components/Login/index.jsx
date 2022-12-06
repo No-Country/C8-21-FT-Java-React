@@ -1,6 +1,17 @@
 import React from 'react'
+import { useState } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
+import { useParams, Link } from 'react-router-dom';
 
 const index = () => {
+    const login = () => {
+        toast.success('Successfully Login!');
+    }
+
+
+
+
+
     return (
         <>
             <section className="h-full gradient-form bg-gray-200 md:h-screen">
@@ -35,14 +46,18 @@ const index = () => {
                                                     />
                                                 </div>
                                                 <div className="text-center pt-1 mb-12 pb-1">
-                                                    <button
+                                                    <Toaster />
+                                                    <Link
+                                                        onClick={login}
                                                         className="bg-[#0156FF] inline-block px-6 py-2.5 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full mb-3"
                                                         type="button"
                                                         data-mdb-ripple="true"
                                                         data-mdb-ripple-color="light"
+                                                        to='/'
                                                     >
                                                         Ingresar
-                                                    </button>
+                                                    </Link>
+
                                                     <a className="text-gray-500" href="#!">Olvidaste Tu contraseña?</a>
                                                 </div>
 
@@ -61,13 +76,12 @@ const index = () => {
                                             </p>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </section >
         </>
     )
 }

@@ -1,13 +1,10 @@
 import React, { useState } from 'react'
 import styled, { withTheme } from 'styled-components'
 import BurguerButton from './BurguerButton'
-import { Link } from 'react-router-dom'
-
 import Logo from '../../../public/Logo.png'
-
-// Icono de Lupita 
 import { AiOutlineUserAdd, AiOutlineShoppingCart } from 'react-icons/ai'
 import index from '../Header'
+import { Link, NavLink, useParams } from 'react-router-dom'
 
 //Funcion del Nav
 function navbar() {
@@ -17,6 +14,8 @@ function navbar() {
         // Cambia el estado del click y vicerversa
         setClicked(!clicked)
     }
+    const params = useParams()
+
     return (
         <>
             <NavContainer>
