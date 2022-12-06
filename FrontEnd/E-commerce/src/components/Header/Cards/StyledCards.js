@@ -13,11 +13,6 @@ export const ContentCard = styled.div`
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
     background: red;
-
-    @media (max-width: 1027px){
-        grid-template-columns: 1fr 1fr; 
-        width: 90%;
-    }
 `
 
 export const ContentGrid = styled.div`
@@ -28,11 +23,28 @@ export const ContentGrid = styled.div`
     margin-top: 20px;
     margin-bottom: 20px;
 
+    
+    @media (max-width: 770px){
+        grid-template-columns: 1fr 1fr 1fr; 
+    }
+
+    @media (max-width: 540px){
+        grid-template-columns: 1fr 1fr; 
+    }
+    @media (max-width: 420px){
+        grid-template-columns: 1fr; 
+    }
+
 
     .firt{
         margin-right: 20px;
         width: 430px;
         height: 330px;
+
+        @media (max-width: 770px){
+            width: 200px;
+            height: 330px;
+        }
     }
 `
 
@@ -42,6 +54,11 @@ export const Card = styled.div`
     height: 310px;
     background: white;
     box-shadow: 0px -2px 2px #ccc, 0px -1px 2px #ccc, 0px 1px 1px #ccc, 0px 2px 2px #ccc, 0px 3px 3px #ccc, 0px 4px 4px #ccc, 0px 5px 5px #ccc;
+
+    @media (max-width: 420px){
+        width: 180px;
+        height: 310px;
+    }
 
     .img{
         padding:20px;
