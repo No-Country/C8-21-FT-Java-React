@@ -1,16 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 
-function BurguerButton(props){
+function BurguerButton(props) {
   return (
     <Burguer>
-        <div onClick={props.handleClick} 
-             className={`icon nav-icon-5 ${props.clicked ? 'open' : ''}`}
-        >
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+      <div onClick={props.handleClick}
+        className={`icon nav-icon-5 ${props.clicked ? 'open' : ''}`}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </Burguer>
   )
 }
@@ -27,7 +27,7 @@ const Burguer = styled.div`
   display: inline-block;
 }
 .nav-icon-5 span{
-  background-color:#fff;
+  background-color: black;
   position: absolute;
   border-radius: 2px;
   transition: .3s cubic-bezier(.8, .5, .2, 1.4);
@@ -50,6 +50,7 @@ const Burguer = styled.div`
 }
 .nav-icon-5:not(.open):hover span:nth-child(1){
   transform: rotate(-3deg) scaleY(1.1);
+
 }
 .nav-icon-5:not(.open):hover span:nth-child(2){
   transform: rotate(3deg) scaleY(1.1);
@@ -60,12 +61,18 @@ const Burguer = styled.div`
 .nav-icon-5.open span:nth-child(1){
   transform: rotate(45deg);
   top: 13px;
+  z-index:11;
+  background: white;
 }
 .nav-icon-5.open span:nth-child(2){
   opacity:0;
+  z-index:11;
+  background: white;
 }
 .nav-icon-5.open span:nth-child(3){
   transform: rotate(-45deg);
   top: 13px;
+  z-index:11;
+  background: white;
 }`
 
