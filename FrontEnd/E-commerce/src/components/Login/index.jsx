@@ -2,18 +2,15 @@ import React from 'react'
 import { useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import { useParams, Link } from 'react-router-dom';
+import Navbar from '../Navbar/index'
 
 const index = () => {
     const login = () => {
         toast.success('Successfully Login!');
     }
-
-
-
-
-
     return (
         <>
+            <Navbar />
             <section className="h-full gradient-form bg-gray-200 md:h-screen">
                 <div className="container py-12 px-6 h-full">
                     <div className="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">

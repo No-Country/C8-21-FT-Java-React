@@ -19,7 +19,9 @@ function navbar() {
     return (
         <>
             <NavContainer>
-                <img className='img' src={Logo} alt='Logo' />
+                <Link to='/'>
+                    <img className='img' src={Logo} alt='Logo' />
+                </Link>
                 <div className={`links ${clicked ? 'active' : ''}`}>
                     <a onClick={handleClick} href="#h"> Periféricos</a>
                     <a onClick={handleClick} href="#h"> Monitores</a>
@@ -28,7 +30,9 @@ function navbar() {
                 </div>
                 <div className={`iconos ${clicked ? 'active' : ''}`}>
                     <AiOutlineShoppingCart color='grey' cursor='pointer' className='shop' />
-                    <AiOutlineUserAdd color='blue' cursor='pointer' className='user' />
+                    <Link to='/login'>
+                        <AiOutlineUserAdd color='blue' cursor='pointer' className='user' />
+                    </Link>
                 </div>
                 <div className='burguer'>
                     <BurguerButton clicked={clicked} handleClick={handleClick} />
