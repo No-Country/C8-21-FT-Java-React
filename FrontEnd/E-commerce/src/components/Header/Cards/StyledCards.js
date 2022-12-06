@@ -19,9 +19,10 @@ export const ContentGrid = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     width: 100%;
-    gap: 20px;
+    gap: 15px;
     margin-top: 20px;
     margin-bottom: 40px;
+    margin-right: 30px;
 
     
     @media (max-width: 770px){
