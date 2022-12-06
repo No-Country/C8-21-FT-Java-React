@@ -2,41 +2,11 @@ import React, { useState } from 'react'
 import styled, { withTheme } from 'styled-components'
 import BurguerButton from './BurguerButton'
 
-import Logo from '../../assets/img/logo.png'
-
+import Logo from '../../../public/Logo.png'
 
 // Icono de Lupita 
-import { AiOutlineSearch, AiOutlineShoppingCart } from 'react-icons/ai'
+import { AiOutlineUserAdd, AiOutlineShoppingCart } from 'react-icons/ai'
 import index from '../Header'
-
-/*
-//Importar imagen
-//<img src={} alt={} />
-
-// Icono de Lupita 
-// Se importa asi : <AiOutlineSearch />
-
-// Icono del carrito 
-// Se importa asi : <AiOutlineShoppingCart />
-
-const index = () => {
-    return (
-        <>
-            <NavContainer>
-                <h2><span>TechWare</span> Nav</h2>
-            </NavContainer>
-            <div>
-                <a href=""> Hardware</a>
-                <a href=""> Periféricos</a>
-                <a href=""> Monitores</a>
-                <a href=""> Gabinetes</a>
-                <a href=""> Notebooks</a>
-                <a href=""> Contacto</a>
-            </div>
-        </>
-    )
-}
-*/
 
 //Funcion del Nav
 function navbar() {
@@ -49,14 +19,16 @@ function navbar() {
     return (
         <>
             <NavContainer>
-                <h2><span>TechWare</span></h2>
+                <img className='img' src={Logo} alt='Logo' />
                 <div className={`links ${clicked ? 'active' : ''}`}>
-                    <a onClick={handleClick} href="#h"> Hardware</a>
                     <a onClick={handleClick} href="#h"> Periféricos</a>
                     <a onClick={handleClick} href="#h"> Monitores</a>
                     <a onClick={handleClick} href="#h"> Gabinetes</a>
-                    <a onClick={handleClick} href="#h"> Notebooks</a>
                     <a onClick={handleClick} href="#h"> Contacto</a>
+                </div>
+                <div className='iconos'>
+                    <AiOutlineShoppingCart color='grey' className='shop' />
+                    <AiOutlineUserAdd color='blue' className='user' />
                 </div>
                 <div className='burguer'>
                     <BurguerButton clicked={clicked} handleClick={handleClick} />
@@ -69,22 +41,38 @@ function navbar() {
 
 export default navbar
 const NavContainer = styled.nav`
+    .img{
+        width:65px;
+        height: 65px;
+    }
     h2{
-        color: white;
+        color: black;
         font-weight: 400;
         span{
-            font-weigth: bold;      
+            font-weight: bold;      
         }
     }
     padding: .4rem;
-    background-color: #333;
+    background-color: white;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    height: 80px;
+
+    .iconos{
+        display: flex;
+        gap: 20px;
+
+        .shop, .user{
+            width: 23px;
+            height: 23px;
+        }
+    }
     a{
-        color: white;
+        color: black;
         text-decoration: none;
-        margin-rigth: 1rem;
+        margin-right: 1rem;
+        font-weight:600;
     }
 
     //El siguiente codigo oculta el icono de menu hamburguesa cuando se reduce el tamaño de la ventana
@@ -96,6 +84,7 @@ const NavContainer = styled.nav`
     //Codigo para ocultar links de opciones del nav
     .links{
         position: absolute;
+        display: flex;
         top: -700px;
         left: -2000px;
         right: 0;
@@ -103,17 +92,19 @@ const NavContainer = styled.nav`
         margin-right: auto;
         text-align: center;
         transition: all .5s ease;
+        color: black;
         a{
-            color: white;
+            color: black;
             font-size: 2rem;
             display: block;
+            justify-content: center;
         }
         @media(min-width: 768px){
             position: initial;
             margin: 0;
             a{
                 font-size: 1rem;
-                color: white;
+                color: black;
                 display: inline;
             }
         }
@@ -132,7 +123,8 @@ const NavContainer = styled.nav`
         a{
             font-size: 1.6rem;
             margin-top: 1rem; 
-            color: white;
+            color: black;
+            z-index: 10;
         }      
     }
 `
@@ -143,7 +135,7 @@ const BgDiv = styled.div`
     left: -1000px;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 1;
     transition: all.6s ease;
     &.active{
         border-radius: 0 0 80% 0;
@@ -151,5 +143,6 @@ const BgDiv = styled.div`
         left: 0;
         width: 100%;
         height: 100%;
+        z-index: 10;
     }
 `
