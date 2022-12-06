@@ -21,7 +21,7 @@ export const ContentGrid = styled.div`
     width: 100%;
     gap: 20px;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 
     
     @media (max-width: 770px){

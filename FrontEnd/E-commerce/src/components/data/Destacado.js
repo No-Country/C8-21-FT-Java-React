@@ -98,3 +98,48 @@ export const DestacadoPeriferico = [
             '',
     },
 ];
+
+export const EmpresaConfian = [
+    {
+        id: 1,
+        Img: 'adata.png',
+        linkImg:
+            '',
+    },
+    {
+        id: 2,
+        Img: 'amd.png',
+        linkImg:
+            '',
+    },
+    {
+        id: 3,
+        Img: 'gigabyte.png',
+        linkImg:
+            '',
+    },
+    {
+        id: 4,
+        Img: 'intel.png',
+        linkImg:
+            '',
+    },
+    {
+        id: 5,
+        Img: 'msi.png',
+        linkImg:
+            '',
+    },
+    {
+        id: 6,
+        Img: 'razer.png',
+        linkImg:
+            '',
+    },
+    {
+        id: 7,
+        Img: 'take.png',
+        linkImg:
+            '',
+    },
+];
