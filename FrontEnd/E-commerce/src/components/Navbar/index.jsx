@@ -23,13 +23,13 @@ function navbar() {
                     <img className='img' src={Logo} alt='Logo' />
                 </Link>
                 <div className={`links ${clicked ? 'active' : ''}`}>
-                    <a href="#" id="perifericos" > Periféricos</a>
-                    <a href="#"> Monitores</a>
-                    <a href="#"> Gabinetes</a>
+                    <a href="#perifericos" > Periféricos</a>
+                    <a href="#monitor"> Monitores</a>
+                    <a href="#gabinetes"> Gabinetes</a>
                     <a href="#"> Contacto</a>
                 </div>
                 <div className={`iconos ${clicked ? 'active' : ''}`}>
-                    
+
                     <Link to='/login'>
                         <AiOutlineUserAdd color='blue' cursor='pointer' className='user' />
                     </Link>

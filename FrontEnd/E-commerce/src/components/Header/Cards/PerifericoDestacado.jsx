@@ -11,7 +11,7 @@ const PerifericoCard = () => {
 
     return (
         <>
-            <ContentGrid id="#perifericos">
+            <ContentGrid id="perifericos">
                 <img src={PerifericoMain} className='firt' />
                 {DestacadoPeriferico.map(item => (
                     <Card key={item.id}>

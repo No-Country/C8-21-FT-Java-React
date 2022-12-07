@@ -12,7 +12,7 @@ const MonitorCard = () => {
     return (
         <>
             <Text>Productos Destascados</Text>
-            <ContentGrid>
+            <ContentGrid id='monitor'>
                 <img src={Monitor} className='firt' />
                 {DestacadoMonitores.map(item => (
                     <Card key={item.id}>
