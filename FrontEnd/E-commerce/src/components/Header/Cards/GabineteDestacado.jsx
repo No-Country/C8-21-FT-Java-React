@@ -11,10 +11,10 @@ const GabineteCard = () => {
 
     return (
         <>
-            <ContentGrid>
+            <ContentGrid id='gabinetes'>
                 <img src={GabineteMain} className='firt' />
                 {DestacadoGabinete.map(item => (
-                    <Card key={item.id}>
+                    <Card key={item.id} >
                         <img src={item.Img} alt={item.altImg} className='img' />
                         <div className='Starts'>
                             <AiFillStar color='yellow' />

@@ -11,8 +11,9 @@ function navbar() {
 
     const [clicked, setClicked] = useState(false)
     const handleClick = () => {
-        // Cambia el estado del click y vicerversa
-        setClicked(!clicked)
+        if (window.innerWidth < 770) {
+            setClicked(!clicked)
+        }
     }
     const params = useParams()
 
@@ -23,13 +24,13 @@ function navbar() {
                     <img className='img' src={Logo} alt='Logo' />
                 </Link>
                 <div className={`links ${clicked ? 'active' : ''}`}>
-                    <a onClick={handleClick} href="#h"> Periféricos</a>
-                    <a onClick={handleClick} href="#h"> Monitores</a>
-                    <a onClick={handleClick} href="#h"> Gabinetes</a>
-                    <a onClick={handleClick} href="#h"> Contacto</a>
+                    <a href="#perifericos" onClick={handleClick}> Periféricos</a>
+                    <a href="#monitor" onClick={handleClick}> Monitores</a>
+                    <a href="#gabinetes" onClick={handleClick}> Gabinetes</a>
+                    <a href="#"> Contacto</a>
                 </div>
                 <div className={`iconos ${clicked ? 'active' : ''}`}>
-                    <AiOutlineShoppingCart color='grey' cursor='pointer' className='shop' />
+
                     <Link to='/login'>
                         <AiOutlineUserAdd color='blue' cursor='pointer' className='user' />
                     </Link>
@@ -61,7 +62,7 @@ const NavContainer = styled.nav`
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 80px;
+    height: 90px;
 
     .iconos{
         display: flex;
@@ -158,7 +159,7 @@ const BgDiv = styled.div`
     background-color: #222;
     position: absolute;
     top: -1000px;
-    left: -1000px;
+    left: -10000px;
     width: 100%;
     height: 100%;
     z-index: 1;
