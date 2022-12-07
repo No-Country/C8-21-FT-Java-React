@@ -7,7 +7,7 @@ import ScrollToTop from "react-scroll-to-top";
 const index = () => {
     return (
         <>
-            <ScrollToTop smooth top='600' color='#464EAF' />
+            <ScrollToTop smooth top='400' color='#464EAF' />
             <footer className="bg-black text-white">
                 <div className="md:flex md:justify-center md:items-center sm:px-12 px-4 bg-black] py-7">
                     <h1
