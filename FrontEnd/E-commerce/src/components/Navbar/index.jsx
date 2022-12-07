@@ -11,8 +11,9 @@ function navbar() {
 
     const [clicked, setClicked] = useState(false)
     const handleClick = () => {
-        // Cambia el estado del click y vicerversa
-        setClicked(!clicked)
+        if (window.innerWidth < 770) {
+            setClicked(!clicked)
+        }
     }
     const params = useParams()
 
@@ -23,9 +24,9 @@ function navbar() {
                     <img className='img' src={Logo} alt='Logo' />
                 </Link>
                 <div className={`links ${clicked ? 'active' : ''}`}>
-                    <a href="#perifericos" > Periféricos</a>
-                    <a href="#monitor"> Monitores</a>
-                    <a href="#gabinetes"> Gabinetes</a>
+                    <a href="#perifericos" onClick={handleClick}> Periféricos</a>
+                    <a href="#monitor" onClick={handleClick}> Monitores</a>
+                    <a href="#gabinetes" onClick={handleClick}> Gabinetes</a>
                     <a href="#"> Contacto</a>
                 </div>
                 <div className={`iconos ${clicked ? 'active' : ''}`}>
@@ -48,7 +49,6 @@ const NavContainer = styled.nav`
     .img{
         width:65px;
         height: 65px;
-        margin-botton: 20px; 
     }
     h2{
         color: black;
