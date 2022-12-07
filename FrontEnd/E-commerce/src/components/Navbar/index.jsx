@@ -23,13 +23,13 @@ function navbar() {
                     <img className='img' src={Logo} alt='Logo' />
                 </Link>
                 <div className={`links ${clicked ? 'active' : ''}`}>
-                    <a onClick={handleClick} href="#h"> Periféricos</a>
-                    <a onClick={handleClick} href="#h"> Monitores</a>
-                    <a onClick={handleClick} href="#h"> Gabinetes</a>
-                    <a onClick={handleClick} href="#h"> Contacto</a>
+                    <a href="#" id="perifericos" > Periféricos</a>
+                    <a href="#"> Monitores</a>
+                    <a href="#"> Gabinetes</a>
+                    <a href="#"> Contacto</a>
                 </div>
                 <div className={`iconos ${clicked ? 'active' : ''}`}>
-                    <AiOutlineShoppingCart color='grey' cursor='pointer' className='shop' />
+                    
                     <Link to='/login'>
                         <AiOutlineUserAdd color='blue' cursor='pointer' className='user' />
                     </Link>
@@ -48,6 +48,7 @@ const NavContainer = styled.nav`
     .img{
         width:65px;
         height: 65px;
+        margin-botton: 20px; 
     }
     h2{
         color: black;
@@ -61,7 +62,7 @@ const NavContainer = styled.nav`
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 80px;
+    height: 90px;
 
     .iconos{
         display: flex;
