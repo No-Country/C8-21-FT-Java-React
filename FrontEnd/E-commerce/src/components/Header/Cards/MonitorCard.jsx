@@ -11,7 +11,7 @@ const MonitorCard = () => {
 
     return (
         <>
-            <Text>Productos Destascados</Text>
+            <Text>Productos Destacados</Text>
             <ContentGrid id='monitor'>
                 <img src={Monitor} className='firt' />
                 {DestacadoMonitores.map(item => (
