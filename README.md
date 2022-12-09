@@ -17,7 +17,7 @@ Debes tener inslatado node, unas vez hayas clonado este proyecto haz estos coman
 ### Introducción
 Ecommerce desarrollado en react el cual dicho es un ecommerce de componentes de Hardware. [Para ver el proyecto, haz click aquí ](https://teachware.vercel.app/ 'Para ver el proyecto, haz click aquí ').
 
-##Integrantes del grupo:
+### Integrantes del grupo:
 
 1. Alvarez Matias **(FrontEnd)** : [LinkInd](https://www.linkedin.com/in/mati-dev/ 'LinkInd'), [GitHub](https://github.com/MatiAlva 'GitHub')
 2. Yesid Linares **(FrontEnd)** : [LinkInd](https://www.linkedin.com/in/linaresy/ 'LinkInd'), [Github](https://github.com/linaresy 'Github')
